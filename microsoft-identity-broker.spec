@@ -16,7 +16,7 @@ Source3: wrapper-identity-broker
 BuildRequires: systemd-rpm-macros
 %{?sysusers_requires_compat}
 Requires: (microsoft-edge-beta or microsoft-edge-dev or microsoft-edge-stable)
-Requires: java-headless
+Requires: java-11-openjdk-headless
 Requires: javapackages-filesystem
 Requires: javapackages-tools
 
@@ -87,7 +87,7 @@ install -p -D -m 0644 %{_builddir}/usr/lib/sysusers.d/microsoft-identity-broker.
 %{_sysconfdir}/%{name}/lsb-release
 %{_sysconfdir}/%{name}/os-release
 
-%{_fontdir}/*.ttf
+/%{_fontdir}/*.ttf
 %{_opt_javadir}/*.jar
 
 %{_unitdir}/microsoft-identity-device-broker.service
